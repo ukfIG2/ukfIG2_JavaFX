@@ -1,0 +1,7 @@
+Naprogramujte aplikáciu, v ktorej:
+
+    budú na spodnom okraji scény (okna) vznikať balóny (5 bodov) každú sekundu (1 bod) DONE
+    rôznej farby (môžete striedať napr. 5 rôznych) (3 body)							   DONE
+    budú sa rôznou rýchlosťou pohybovať smerom nahor (3 body)					   asi DONE
+    po dosiahnutí horného okraja sa stratia (3 body)							   asi DONE
+    po kliknutí na balón, balón praskne (tiež sa stratí (5 bodov))				   asi DONE

@@ -1,0 +1,12 @@
+Naprogramujte aplikáciu, v ktorej:
+
+    bude definovaný všeobecný objekt Rastlina, ktorý bude mať nastavených 5 úrovní svojej veľkosti a bude schopný rásť. Pri dosiahnutí 5 úrovne veľkosti zase začne rásť odznova. Vzhľad rastiny zatiaľ nedefinujte (4 body). Zmena veľkosti sa bude realizovať každú sekundu (2 body)
+    od Rastliny odvoďte objekt Strom, Kvet a Krik, pričom každý z nich bude mať svoj vhľad pre každý z piatich krokov rôznej veľkosti (3 x po 3 body - 1 za konštruktor 2 za vzhľad a kresliacu metódu).
+    V aplikácii zabezpečte 3 tlačidlá pod sebou (2 body), z ktorých každé po kliknutí pridá svoj objekt na náhodnej pozícii (3 body - za každý objekt 1 bod).
+
+Aplikáciu zozipujte a odovzdajte.
+
+Rastlina
+    Strom
+    Kvet
+    Krik
