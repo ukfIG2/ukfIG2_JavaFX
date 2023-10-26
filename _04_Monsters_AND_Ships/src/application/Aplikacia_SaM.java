@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Aplikacia_SaM extends Application{
+	private double sirka = 1100;
+	private double vyska = 500;
 	
 	public void start(Stage primaryStage) throws Exception {
 		Group root = new Group();
