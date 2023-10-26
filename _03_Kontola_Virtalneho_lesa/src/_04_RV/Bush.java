@@ -1,4 +1,4 @@
-package application;
+package _04_RV;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.paint.Color;
@@ -14,11 +14,11 @@ public class Bush extends Drv {
     double[] berryY = {Math.random() * 30 + 40, Math.random() * 30 + 40, Math.random() * 30 + 40, Math.random() * 30 + 40, Math.random() * 30 + 40};
 
     public Bush(double x, double y) {
-        super(0, 0);
-        this.x = x;
-        this.y = y;
-        setLayoutX(this.x);
-        setLayoutY(this.y);
+        super(0, 0);		//zdedenie drv.bush nastavi pozíciu x=0, y=0
+        this.x = x;			//atribút x sa nastaví na x
+        this.y = y;			//atribút y sa nastaví na y
+        setLayoutX(this.x);	//nastaví pozíciu x=x;
+        setLayoutY(this.y);	//nastaví pozíciu y=y;
         startGrowing();
     }
 

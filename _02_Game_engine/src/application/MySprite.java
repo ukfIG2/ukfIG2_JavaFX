@@ -20,9 +20,10 @@ public class MySprite extends ImageView {
         for(int i = 0; i < pocetSpritov; i++) {
             sprites[i] = new Image(nazov+i+".png", w, h, false, false);
         }
-        for(int i = 0; i < pocetSpritov; i++) {
+        // Nadbytocne???
+        /*for(int i = 0; i < pocetSpritov; i++) {
             sprites[i] = new Image(nazov+i+".png", w, h, false, false);
-        }
+        }*/
         setImage(sprites[0]);
         setLayoutX(xx);
         setLayoutY(yy);

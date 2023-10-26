@@ -1,4 +1,4 @@
-package application;
+package _01_AZ;
 
 import java.util.Random;
 

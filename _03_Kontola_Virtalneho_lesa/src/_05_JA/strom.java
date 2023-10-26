@@ -1,4 +1,4 @@
-package application;
+package _05_JA;
 import javafx.scene.paint.Color;
 
 

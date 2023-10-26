@@ -1,4 +1,4 @@
-package application;
+package _02_RG;
 
 import java.util.Random;
 

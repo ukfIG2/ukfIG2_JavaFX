@@ -1,4 +1,4 @@
-package application;
+package _05_JA;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.animation.Animation;

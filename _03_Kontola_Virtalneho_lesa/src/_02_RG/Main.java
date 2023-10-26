@@ -1,4 +1,4 @@
-package application;
+package _02_RG;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

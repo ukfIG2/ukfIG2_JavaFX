@@ -1,4 +1,4 @@
-package application;
+package _02_RG;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -23,9 +23,11 @@ public class Strom extends Rastlina {
 	        double y2 = 60 - 20 * i;
 	        double x3 = 20;
 	        double y3 = 80 - 20 * i;
+	       // double x4 = 30;
+	       // double y4 = 80 - 20 * i;
 
-	        double[] x = {x1, x2, x3};
-	        double[] y = {y1, y2, y3};
+	        double[] x = {x1, x2, x3};//, x4};
+	        double[] y = {y1, y2, y3};//, y4};
 	        gc.fillPolygon(x, y, 3);
 	    }
 	}

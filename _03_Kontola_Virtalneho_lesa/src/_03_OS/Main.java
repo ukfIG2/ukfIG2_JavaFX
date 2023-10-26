@@ -1,4 +1,4 @@
-package application;
+package _03_OS;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -37,7 +37,8 @@ public class Main extends Application {
 		}
 	}
 	private void pridajStrom(Group root){
-        Strom a = new Strom((int)(100+Math.random()*400),(int)(50+Math.random()*250));
+        //Strom a = new Strom((int)(100+Math.random()*400),(int)(50+Math.random()*250));
+		Strom a = new Strom ((int) (Math.random()*500),  (int) (Math.random()*300));
         root.getChildren().add(a);
     }
     private void pridajKvet(Group root){

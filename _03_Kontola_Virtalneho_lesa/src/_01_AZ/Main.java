@@ -1,4 +1,4 @@
-package application;
+package _01_AZ;
 	
 
 import javafx.animation.Animation;

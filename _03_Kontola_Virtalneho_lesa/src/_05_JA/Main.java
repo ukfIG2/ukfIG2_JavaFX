@@ -1,4 +1,4 @@
-package application;
+package _05_JA;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;

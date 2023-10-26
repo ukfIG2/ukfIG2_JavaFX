@@ -1,4 +1,4 @@
-package application;
+package _03_OS;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
