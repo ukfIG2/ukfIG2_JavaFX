@@ -11,6 +11,7 @@ public class Game extends Group{
 	
 	private int Zivot = 5;
 	private int Skore = 0;
+	public ArrayList<Gula> guly = new ArrayList<Gula>();
 	
 	private final int Velkost_snimku = 30;
 	private final int Rychlost_hraca = 100;
@@ -35,18 +36,18 @@ public class Game extends Group{
 		AI = new ArrayList<Sprites_snimky>();
 		for(int i=0; i<pocet_AI; i++) {
 			Sprites_snimky Ss = new Sprites_snimky("monster", 8, Math.random() * sirka_hry,
-					Math.random() * vyska_hry, Velkost_snimku, Velkost_snimku); 
+					Math.random() * vyska_hry, Velkost_snimku, Velkost_snimku, this); 
 			AI.add(Ss);
 			getChildren().add(Ss);
 		}
 		Hrac = new Sprites_snimky("ship", 8, Math.random() * sirka_hry, Math.random() * vyska_hry, 
-				Velkost_snimku, Velkost_snimku);
+				Velkost_snimku, Velkost_snimku, this);
 		getChildren().add(Hrac);
 		
 		// urobime focusovatelny cely group
 		setFocusTraversable(true);
 		setFocused(true);
-		//if(AI.size()==0) {System.exit(0);}
+		
 	}
 	
 	public void update(double deltaTime) {
@@ -84,13 +85,28 @@ public class Game extends Group{
     	}
     	// identifikuj kolizie a zareaguj podla nich
     	for(int i=AI.size() - 1; i>=0; i--) {
-    		if(Hrac.kolizia_snimkov(AI.get(i))) { //ak kolízia
+    		if(Hrac.kolizia_snimkov(AI.get(i))) { 
+    			AI.get(i).StopTimeline();//ak kolízia
     			getChildren().remove(AI.get(i));	// vymaž zo scény
     			AI.remove(AI.get(i));			// aj zo zoznamu
     		}
     	}
     	if(AI.size()==0) {System.exit(0);}
     	System.out.println(AI.size());
+        //System.out.println(1+(Math.random()*5));
+        //System.out.println(AI.)
+		
+	if (Hrac.intersectWithProjectile(guly)){
+		Zivot--; 
+		Aplikacia_MaS_TATO.zivot.setText("Health: " + Zivot + "/5");
+		if (Zivot <= 0){
+    		System.out.print("Si skoncil.");
+    		System.exit(0);
+    	}
 	}
 }
+}
+
+
+
 

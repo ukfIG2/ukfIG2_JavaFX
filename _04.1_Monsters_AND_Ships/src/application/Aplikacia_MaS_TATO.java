@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 public class Aplikacia_MaS_TATO extends Application{
 	private int sirka = 1920/2;
 	private int vyska = 1080/2;
+	public static Text zivot = new Text("Zivot: 5");
+	public static Text skore = new Text("Skore: 0");
 	
 	public void start(Stage primaryStage) throws Exception {
 		Group root = new Group();
@@ -16,9 +18,9 @@ public class Aplikacia_MaS_TATO extends Application{
 		Game game = new Game(sirka, vyska, "pozadie.png", 20);
 		root.getChildren().add(game);
 		
-		Text zivot = new Text("Zivot: 5");
-		Text skore = new Text("Skore: 0");
-		zivot.setLayoutX(5); skore.setLayoutX(60);
+		/*Text zivot = new Text("Zivot: 5");
+		Text skore = new Text("Skore: 0");*/
+		zivot.setLayoutX(5); skore.setLayoutX(100);
 		zivot.setLayoutY(20); skore.setLayoutY(20);
 		root.getChildren().addAll(zivot, skore);
 		
