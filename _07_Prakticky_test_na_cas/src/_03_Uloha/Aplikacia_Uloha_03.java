@@ -9,7 +9,7 @@ public class Aplikacia_Uloha_03 extends Application{
 	
 	public void start(Stage primaryStage) throws Exception {
 		Group root = new Group();
-		Scene scene = new Scene(root, 600, 300);
+		Scene scene = new Scene(root, 500, 500);
 		
 		
 		primaryStage.setTitle("Moja FX aplikacia");
