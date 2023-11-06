@@ -1,3 +1,4 @@
+package Strom_jablko;
 import javafx.animation.Timeline;
 import javafx.scene.Group;
 import javafx.scene.canvas.Canvas;

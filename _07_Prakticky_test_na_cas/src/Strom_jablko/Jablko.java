@@ -1,3 +1,4 @@
+package Strom_jablko;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -13,7 +14,7 @@ public class Jablko extends Canvas{
 	private Timeline timeline2;
 	private double Sirka, Dlzka;
 	private Group group;
-	private int sekund =0;
+	private int sekund =2;
 	
 	public Jablko(Group group, double PolohaX, double PolohaY, double Sirka, double Dlzka) {
 		super(Sirka, Dlzka);

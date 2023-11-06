@@ -1,3 +1,4 @@
+package Strom_jablko;
 import java.util.ArrayList;
 
 import javafx.application.Application;
@@ -7,7 +8,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Aplikacia_strom_jablko extends Application{
-	private ArrayList<Jablko> jablka;
 	
 	public double random(double min, double max) {
 		return min + (Math.random() * max-min);
