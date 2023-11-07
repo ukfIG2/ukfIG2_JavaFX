@@ -38,16 +38,17 @@ public class Lietadlo extends Canvas{ //600 300
 	}
 	
 	private void Vykres(){
-		//gc.clearRect(0, 0, 100, 50);
+		gc.clearRect(0, 0, 100, 50);
 		if(smer==0) {
-			gc.clearRect(0, 0, 100, 50);
+			//gc.clearRect(0, 0, 100, 50);
 			gc.setFill(Color.YELLOW);
 			gc.fillOval(0, 0, 80, 50);
 			gc.setFill(Color.BLACK);
 			gc.fillPolygon(_1, _2, 3);
+			//gc.strokePolygon(_2, _1, rychlost);
 			}
 		if(smer==1) {
-			gc.clearRect(0, 0, 100, 50);
+			//gc.clearRect(0, 0, 100, 50);
 			gc.setFill(Color.YELLOW);
 			gc.fillOval(20, 0, 80, 50);
 			gc.setFill(Color.BLACK);

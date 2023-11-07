@@ -43,6 +43,8 @@ public class Jablko extends Canvas{
 	gc.setLineWidth(3);
 	gc.strokeLine(25, 10, 50, 0);
 	//System.out.print("Ano");
+	gc.setFill(Color.BLACK);
+	gc.fillText("Nieco", 50, 60);
 	}
 	
 	private void posun() {

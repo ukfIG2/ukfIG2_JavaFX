@@ -15,14 +15,14 @@ public class _01_Pandrlak_aplikacia extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,800,400);
 			HBox hbox = new HBox(50);
 			
 			Button b1 = new Button("LeftHand");
 			Button b2 = new Button("RightHand");
 			Button b3 = new Button("Drep/Normal");
 			Button b4 = new Button("Usmev");
-			
+			//hbox.set
 			_01_Pandrlak pandrlak = new _01_Pandrlak(50, 50);
 			
 			b1.setOnAction(new EventHandler<ActionEvent>() {
