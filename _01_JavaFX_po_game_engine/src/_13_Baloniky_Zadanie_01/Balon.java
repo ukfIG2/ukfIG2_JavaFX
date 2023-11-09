@@ -30,7 +30,7 @@ public class Balon extends Canvas{
 		vykresli();
 		//Pohyb balonikov
 		casovac = new Timeline(
-				new KeyFrame(Duration.millis(75),e -> pohyb()));
+				new KeyFrame(Duration.millis(100),e -> pohyb()));
 		casovac.setCycleCount(Animation.INDEFINITE);
 		casovac.play();
 		setOnMouseClicked(evt->prask());
