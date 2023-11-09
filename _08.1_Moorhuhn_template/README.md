@@ -1,3 +1,6 @@
+# Pôvodny zdroj
+https://github.com/Rolleander/Moorhuhn
+
 # Moorhuhn
 Old Moorhuhn clone in java, written a long time ago.
 
