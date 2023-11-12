@@ -612,6 +612,7 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
 		Image image = Toolkit.getDefaultToolkit().getImage(filename);
 		filename = getClass().getResource("parallaxbackground.GIF");
 		back = Toolkit.getDefaultToolkit().getImage(filename);
+		System.out.println(back.getHeight(null));
 		filename = getClass().getResource("cloud.gif");
 		cloud = Toolkit.getDefaultToolkit().getImage(filename);
 		filename = getClass().getResource("cursor.gif");
@@ -668,7 +669,7 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
 
 	}
 
-	// Bilder f�r DoubleBuffer
+	// Bilder für DoubleBuffer
 	private Image dbImage;
 	private Graphics dbg;
 
@@ -680,6 +681,7 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
 		}
 		dbg.setColor(getBackground());
 		dbg.fillRect(0, 0, this.getSize().width, this.getSize().height);
+		//System.out.println(this.getSize().width+""+this.getSize().height);
 		dbg.setColor(getForeground());
 		paint(dbg);
 		g.drawImage(dbImage, 0, 0, this);
@@ -692,12 +694,12 @@ public class Main extends Frame implements MouseListener, MouseMotionListener, K
 	}
 
 	public void stop() {
-		// Wird ausgef�hrt wenn Thread gestoppt wird
+		// Wird ausgeführt wenn Thread gestoppt wird
 	}
 
 	public void destroy() {
-		// Wird ausgef�hrt wenn Thread geschlossen wird (Programmende)
-		// Hier m�sst ihr alle Lieder stoppen, falls ihr welche verwendet
+		// Wird ausgeführt wenn Thread geschlossen wird (Programmende)
+		// Hier müsst ihr alle Lieder stoppen, falls ihr welche verwendet
 		// damit sie im Browser nicht weiterlaufen
 	}
 
