@@ -24,23 +24,36 @@ public class Game extends Group{
     public Game(Pane pane, Scene scene) {
     	this.scene=scene;
     	this.pane=pane;
+    	Nastav_Pozadie();
+    	//Image image = new Image("Sliepka/Sliepka04.jpg");
+    	/*ImageView n = new ImageView(image);
     	
-    	//Nastavenie pozadi
-    			pozadie_oblaky = new ImageView(Pozadie_Oblaky);
-    			pozadie_oblaky.setFitWidth(Sirka_hry);
-    			pozadie_oblaky.setFitHeight(Main.Vyska_obrazovky);
-    			pane.getChildren().add(pozadie_oblaky);
-    			
-    			pozadie_dedinka = new ImageView(Pozadie_Dedinka);
-    			pozadie_dedinka.setFitHeight(Main.Vyska_obrazovky);
-    			pozadie_dedinka.setFitWidth(Sirka_hry);
-    			pozadie_dedinka.setY(Main.Vyska_obrazovky-pozadie_dedinka.getFitHeight());
-    			pane.getChildren().add(pozadie_dedinka);
-    			
-    			//Nastavenie udalosti pohybu mysi
-    			scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> pohniKamerou(event.getX()));
+    	n.setX(5400);
+    	n.setY(200);
+pane.getChildren().add(n);*/
+    	Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
+    			smerSliepky(), random(152, Main.Vyska_obrazovky-152), 
+    			142, 152);
+    	pane.getChildren().add(nieco);
+
 	}
     
+    private void Nastav_Pozadie() {
+    	//Nastavenie pozadi
+		pozadie_oblaky = new ImageView(Pozadie_Oblaky);
+		pozadie_oblaky.setFitWidth(Sirka_hry);
+		pozadie_oblaky.setFitHeight(Main.Vyska_obrazovky);
+		pane.getChildren().add(pozadie_oblaky);
+		
+		pozadie_dedinka = new ImageView(Pozadie_Dedinka);
+		pozadie_dedinka.setFitHeight(Main.Vyska_obrazovky);
+		pozadie_dedinka.setFitWidth(Sirka_hry);
+		pozadie_dedinka.setY(Main.Vyska_obrazovky-pozadie_dedinka.getFitHeight());
+		pane.getChildren().add(pozadie_dedinka);
+		
+		//Nastavenie udalosti pohybu mysi
+		scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> pohniKamerou(event.getX()));
+    }
     private void  pohniKamerou(double mouseX) {
 		//System.out.println(mouseX);
 		//System.out.println(root.getTranslateX());
@@ -56,7 +69,19 @@ public class Game extends Group{
                 pane.setTranslateX(pane.getTranslateX() - rychlost_sceny);
             }
         }
-		System.out.println(pane.getTranslateX());
+		//System.out.println(pane.getTranslateX());
 	}
-
-}
+	private double random(double min, double max) {
+		return min + (Math.random() * max);
+	}
+	private double smerSliepky() {
+		double a = random(0,1);
+		if(a<0.5) {return 0;}
+		else {return Sirka_hry;}
+	}
+	
+}	
+	
+	
+	
+	
