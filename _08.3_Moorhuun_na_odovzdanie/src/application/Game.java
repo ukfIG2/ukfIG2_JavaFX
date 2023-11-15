@@ -8,11 +8,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
 public class Game extends Group{
-	Pane pane;
-	Scene scene;
+	private Pane pane;
+	private Scene scene;
 	//Nacirat pozadia
-    Image Pozadie_Oblaky = new Image("cloud.gif");
-    Image Pozadie_Dedinka = new Image("parallaxbackground.GIF");
+    private Image Pozadie_Oblaky = new Image("cloud.gif");
+    private Image Pozadie_Dedinka = new Image("parallaxbackground.GIF");
     //Nastavit sirku hry
     private double Sirka_hry = Pozadie_Dedinka.getWidth()*2 ;	//sirka Snimky/parallaxbackground.GIF *2
     //Premenne pre pozadie
@@ -20,20 +20,17 @@ public class Game extends Group{
     private ImageView pozadie_dedinka;
     
     private double rychlost_sceny = 10;
+    private int smer;
     
     public Game(Pane pane, Scene scene) {
     	this.scene=scene;
     	this.pane=pane;
     	Nastav_Pozadie();
-    	//Image image = new Image("Sliepka/Sliepka04.jpg");
-    	/*ImageView n = new ImageView(image);
-    	
-    	n.setX(5400);
-    	n.setY(200);
-pane.getChildren().add(n);*/
+
+
     	Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
     			smerSliepky(), random(152, Main.Vyska_obrazovky-152), 
-    			142, 152);
+    			142, 152, smer);
     	pane.getChildren().add(nieco);
 
 	}
@@ -76,8 +73,8 @@ pane.getChildren().add(n);*/
 	}
 	private double smerSliepky() {
 		double a = random(0,1);
-		if(a<0.5) {return 0;}
-		else {return Sirka_hry;}
+		if(a<0.5) {smer=1; return 0;}
+		else {smer=0; return Sirka_hry-152;}
 	}
 	
 }	
