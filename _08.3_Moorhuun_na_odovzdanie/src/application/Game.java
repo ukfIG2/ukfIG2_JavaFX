@@ -31,6 +31,7 @@ public class Game extends Group{
     private int Max_pocet_normalnych_sliepok = 100;
     private int Aktulny_pocet_normalnych_sliepok;
     Timeline vznik_sliepok;
+    private double rychlost_sliepky = random(20, 50);
     
     private double rychlost_sceny = 40;
     private int smer; 
@@ -45,13 +46,17 @@ public class Game extends Group{
     	
 	}
     
-    public void update(double deltatime) {
+    public void update(double deltaTime) {
+    	//Pohyb sliepok
     	this.Aktulny_pocet_normalnych_sliepok = AI.size();
-    	System.out.println("Akt = "+Aktulny_pocet_normalnych_sliepok);
+    	//System.out.println("Akt = "+Aktulny_pocet_normalnych_sliepok);
     	for(int i=0; i<AI.size(); i++) {
     		Spriites_snimky ai = AI.get(i);
-    		
-    		
+    		ai.pohyb(deltaTime / 1000000000 * AI.get(i).rychlost_sliepky);
+    		//System.out.println(rychlost_sliepky);
+    		if(AI.get(i).prec==true) {getChildren().remove(AI.get(i)); AI.remove(AI.get(i));}
+    		System.out.println("Sliepka ="+AI.get(i)+" rychlost="+AI.get(i).rychlost_sliepky+
+    				" PolohaX="+AI.get(i).getLayoutX());
     	}
     	
     	
@@ -100,11 +105,12 @@ public class Game extends Group{
 		else {smer=0; return Sirka_hry-152;}
 	}
 	private void VytvorSliepku() {
+		//Ak je na ploche mene ako 100 sliepok da nove
 		if(Aktulny_pocet_normalnych_sliepok<Max_pocet_normalnych_sliepok) {
 		for(int i=0; i<=9; i++) {
 		Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
     			smerSliepky(), random(0, Main.Vyska_obrazovky-152), 
-    			142, 152, smer);
+    			142, 152, smer, random(35, 100));
 		AI.add(nieco);
 		pane.getChildren().add(nieco);
 		}
