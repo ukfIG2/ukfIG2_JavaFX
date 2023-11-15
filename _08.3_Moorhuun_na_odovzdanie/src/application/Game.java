@@ -1,39 +1,61 @@
 package application;
 
+import java.util.LinkedList;
+
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 public class Game extends Group{
+	int o = 0;
 	private Pane pane;
 	private Scene scene;
 	//Nacirat pozadia
     private Image Pozadie_Oblaky = new Image("cloud.gif");
     private Image Pozadie_Dedinka = new Image("parallaxbackground.GIF");
     //Nastavit sirku hry
-    private double Sirka_hry = Pozadie_Dedinka.getWidth()*2 ;	//sirka Snimky/parallaxbackground.GIF *2
+    public double Sirka_hry = Pozadie_Dedinka.getWidth()*2 ;	//sirka Snimky/parallaxbackground.GIF *2
     //Premenne pre pozadie
     private ImageView pozadie_oblaky;
     private ImageView pozadie_dedinka;
+    //Lisr pre normalne Sliepky
+    private LinkedList<Spriites_snimky> AI = new LinkedList<Spriites_snimky>();
+    //Nejake cisla
+    private int Max_pocet_normalnych_sliepok = 100;
+    private int Aktulny_pocet_normalnych_sliepok;
+    Timeline vznik_sliepok;
     
-    private double rychlost_sceny = 10;
-    private int smer;
+    private double rychlost_sceny = 40;
+    private int smer; 
     
     public Game(Pane pane, Scene scene) {
     	this.scene=scene;
     	this.pane=pane;
     	Nastav_Pozadie();
-
-
-    	Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
-    			smerSliepky(), random(152, Main.Vyska_obrazovky-152), 
-    			142, 152, smer);
-    	pane.getChildren().add(nieco);
-
+		vznik_sliepok = new Timeline(new KeyFrame(Duration.seconds(3+random(2, 3)), e -> VytvorSliepku()));
+		vznik_sliepok.setCycleCount(Animation.INDEFINITE);
+		vznik_sliepok.play();
+    	
 	}
+    
+    public void update(double deltatime) {
+    	this.Aktulny_pocet_normalnych_sliepok = AI.size();
+    	System.out.println("Akt = "+Aktulny_pocet_normalnych_sliepok);
+    	for(int i=0; i<AI.size(); i++) {
+    		Spriites_snimky ai = AI.get(i);
+    		
+    		
+    	}
+    	
+    	
+    }
     
     private void Nastav_Pozadie() {
     	//Nastavenie pozadi
@@ -47,6 +69,7 @@ public class Game extends Group{
 		pozadie_dedinka.setFitWidth(Sirka_hry);
 		pozadie_dedinka.setY(Main.Vyska_obrazovky-pozadie_dedinka.getFitHeight());
 		pane.getChildren().add(pozadie_dedinka);
+
 		
 		//Nastavenie udalosti pohybu mysi
 		scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> pohniKamerou(event.getX()));
@@ -54,8 +77,8 @@ public class Game extends Group{
     private void  pohniKamerou(double mouseX) {
 		//System.out.println(mouseX);
 		//System.out.println(root.getTranslateX());
-		double priestor_aktivity = 200;
-		if (mouseX <= priestor_aktivity) {			//Preco 200? Lebo.
+		double priestor_aktivity = 500;
+		if (mouseX <= priestor_aktivity) {			
             // Pohyb dolava
             if (pane.getTranslateX() < 0) {
                 pane.setTranslateX(pane.getTranslateX() + rychlost_sceny);
@@ -76,7 +99,18 @@ public class Game extends Group{
 		if(a<0.5) {smer=1; return 0;}
 		else {smer=0; return Sirka_hry-152;}
 	}
-	
+	private void VytvorSliepku() {
+		if(Aktulny_pocet_normalnych_sliepok<Max_pocet_normalnych_sliepok) {
+		for(int i=0; i<=9; i++) {
+		Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
+    			smerSliepky(), random(0, Main.Vyska_obrazovky-152), 
+    			142, 152, smer);
+		AI.add(nieco);
+		pane.getChildren().add(nieco);
+		}
+		}
+
+	}
 }	
 	
 	

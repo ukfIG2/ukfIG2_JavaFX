@@ -26,6 +26,9 @@ public class Main extends Application{
 		
 		Game game = new Game(root, scene);
 		root.getChildren().add(game);
+		
+		MyTimer timer = new MyTimer(game);
+		timer.start();
 
 		Image icon = new Image("icon.png");			//Asi to funfuje iba pri spracuvani na .jar executable
 		primaryStage.getIcons().add(icon);			//Nastavenie icony pre panel

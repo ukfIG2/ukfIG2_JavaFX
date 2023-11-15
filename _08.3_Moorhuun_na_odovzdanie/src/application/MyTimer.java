@@ -15,7 +15,7 @@ public class MyTimer extends AnimationTimer {
         game.update(now - lastNanoTime);
         lastNanoTime = now;
         try {
-            Thread.sleep(50);
+            Thread.sleep(25);
         } catch (Exception e)  {}
 
     }
