@@ -55,8 +55,8 @@ public class Game extends Group{
     		ai.pohyb(deltaTime / 1000000000 * AI.get(i).rychlost_sliepky);
     		//System.out.println(rychlost_sliepky);
     		if(AI.get(i).prec==true) {getChildren().remove(AI.get(i)); AI.remove(AI.get(i));}
-    		System.out.println("Sliepka ="+AI.get(i)+" rychlost="+AI.get(i).rychlost_sliepky+
-    				" PolohaX="+AI.get(i).getLayoutX());
+    		/*System.out.println("Sliepka ="+AI.get(i)+" rychlost="+AI.get(i).rychlost_sliepky+
+    				" PolohaX="+AI.get(i).getLayoutX());*/
     	}
     	
     	

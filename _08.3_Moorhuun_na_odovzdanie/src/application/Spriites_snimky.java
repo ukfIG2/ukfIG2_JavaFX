@@ -5,7 +5,8 @@ import javafx.scene.image.ImageView;
 
 public class Spriites_snimky extends ImageView{
 	private Game game;
-	private Image[] snimky;
+	//private Image[] snimky;
+	private ImageView[] snimky;
 	private int smer; //0-doprava | 1-dolava
 	private int AKTsnimok;
 	private double Sirka_snimku, Vyska_snimku;
@@ -20,8 +21,8 @@ public class Spriites_snimky extends ImageView{
 			this.game=game; this.smer=smer;  stav=0;
 			this.Sirka_snimku=Sirka_snimku; this.Vyska_snimku=Vyska_snimku;
 			maxX=game.Sirka_hry; this.rychlost_sliepky=rychlost_sliepky;
+			snimky = new ImageView[Pocet_snimkov];
 			//Vytvori zoznam
-			snimky = new Image[Pocet_snimkov];	
 			//Naplnim zoznam
 			for(int i=1; i<=Pocet_snimkov; i++) {
 				String fy;
@@ -29,9 +30,14 @@ public class Spriites_snimky extends ImageView{
 				else {fy="";}
 				String meno = nazov+fy+i+"-removebg-preview.png";
 				//System.out.println(meno);
-				snimky[i-1] = new Image(meno);
+				Image snimok = new Image(meno);	
+				System.out.println(meno);
+				ImageView images = new ImageView(snimok);
+				snimky[i-1] = images;
 			}
-			setImage(snimky[0]);				//Nastavit fotku
+
+			//setImage(snimky[0]);				//Nastavit fotku
+			setImage(snimky[0].getImage());
 			setX(poloha_X); setY(poloha_Y);		//Nastavit polohu
 		}
 		
@@ -44,7 +50,14 @@ public class Spriites_snimky extends ImageView{
 		
 		private void Vykresli() {
 			Dalsi_snimok(stav); //kde zacina stav?
-			setImage(snimky[AKTsnimok]);
+		    setImage(snimky[AKTsnimok].getImage());
+
+		    // Check if smer is 1 (dolava) and apply horizontal flip
+		    if (smer == 1) {
+		        setScaleX(-1);
+		    } else {
+		        setScaleX(1); // Reset to the original scale if smer is not 1
+		    }
 		}
 		
 		public void pohyb(double delta) {
