@@ -1,5 +1,8 @@
 package application;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -15,6 +18,8 @@ public class Spriites_snimky extends ImageView{
 	private double maxX;
 	public boolean prec=false;
 	public double rychlost_sliepky;
+	//Optimalizacia. Caching snimok.
+	private static Map<String, Image> imageCache = new HashMap<>();
 	
 		public Spriites_snimky(Game game, String nazov, int Pocet_snimkov, double poloha_X,
 				double poloha_Y, double Sirka_snimku, double Vyska_snimku, int smer, double rychlost_sliepky) {
@@ -22,22 +27,18 @@ public class Spriites_snimky extends ImageView{
 			this.Sirka_snimku=Sirka_snimku; this.Vyska_snimku=Vyska_snimku;
 			maxX=game.Sirka_hry; this.rychlost_sliepky=rychlost_sliepky;
 			snimky = new ImageView[Pocet_snimkov];
-			//Vytvori zoznam
 			//Naplnim zoznam
 			for(int i=1; i<=Pocet_snimkov; i++) {
 				String fy;
 				if(i<10) {fy="0";}
 				else {fy="";}
 				String meno = nazov+fy+i+"-removebg-preview.png";
-				//System.out.println(meno);
-				Image snimok = new Image(meno);	
-				System.out.println(meno);
+				////////Image snimok = new Image(meno);  //Original
+				Image snimok = imageCache.computeIfAbsent(meno, Image::new); //Vyrazna optimalizacia. Prestalo sekat pri nacitani noych sliepok.
 				ImageView images = new ImageView(snimok);
 				snimky[i-1] = images;
 			}
-
-			//setImage(snimky[0]);				//Nastavit fotku
-			setImage(snimky[0].getImage());
+			setImage(snimky[0].getImage());		//Nastavit fotku
 			setX(poloha_X); setY(poloha_Y);		//Nastavit polohu
 		}
 		
@@ -51,7 +52,6 @@ public class Spriites_snimky extends ImageView{
 		private void Vykresli() {
 			Dalsi_snimok(stav); //kde zacina stav?
 		    setImage(snimky[AKTsnimok].getImage());
-
 		    // Check if smer is 1 (dolava) and apply horizontal flip
 		    if (smer == 1) {
 		        setScaleX(-1);
@@ -61,40 +61,30 @@ public class Spriites_snimky extends ImageView{
 		}
 		
 		public void pohyb(double delta) {
+			double hore_dole = Math.random();
 			if(smer==1) {//doprava
 				setLayoutX(getLayoutX() + delta);
-				if(getLayoutX() > game.Sirka_hry) {prec=true;}
+				if(getLayoutX() > maxX) {prec=true;}
 				Vykresli();
-				//System.out.println("Doprava "+getLayoutX()+" game "+ game.Sirka_hry+" s "+prec);
 			}
 			
 			else if(smer==0) {//dolava
 				setLayoutX(getLayoutX() - delta);
-				if(getLayoutX() < (-game.Sirka_hry-Sirka_snimku)) {prec=true;}
+				if(getLayoutX() < (-maxX-Sirka_snimku)) {prec=true;}
 				Vykresli();
-				//System.out.println("Dolava "+getLayoutX()+" game "+ (-game.Sirka_hry-Sirka_snimku)+" s "+prec);
 			}
 			
+			if(hore_dole<0.3) {
+				setY(getY() + delta);
+				if(getY() + Vyska_snimku > maxY) {prec=true;}
+			}
 			
+			else if(hore_dole<0.6 && hore_dole>=0.3) {
+				setY(getY() - delta);
+				if(getY() < 0 - Vyska_snimku ) {prec=true;}
+			}
+			
+			else {} //Nic teda rovno
 		}
 		
-		/*public void hore(double delta , double maxY) {
-			setLayoutY(getLayoutY() - delta);
-			if(getLayoutY() < 0) {game.getChildren().remove(this);}
-		}
-		
-		public void dole(double delta , double maxY) {
-			setLayoutY(getLayoutY() + delta);
-			if(getLayoutY()>Main.Vyska_obrazovky) {game.getChildren().remove(this);}
-		}
-		
-		public void doprava(double delta , double maxY, int smer) {
-			setLayoutX(getLayoutX() + delta);
-			if(getLayoutX() > game.Sirka_hry) {game.getChildren().remove(this);}
-		}
-		
-		public void dolava(double delta , double maxY) {
-			setLayoutX(getLayoutX() - delta);
-			if(getLayoutX() < 0-Sirka_snimku) {game.getChildren().remove(this);}
-		}*/
 }

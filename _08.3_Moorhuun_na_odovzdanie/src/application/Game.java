@@ -1,6 +1,8 @@
 package application;
 
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -14,7 +16,6 @@ import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 public class Game extends Group{
-	int o = 0;
 	private Pane pane;
 	private Scene scene;
 	//Nacirat pozadia
@@ -26,12 +27,13 @@ public class Game extends Group{
     private ImageView pozadie_oblaky;
     private ImageView pozadie_dedinka;
     //Lisr pre normalne Sliepky
-    private LinkedList<Spriites_snimky> AI = new LinkedList<Spriites_snimky>();
+    private List<Spriites_snimky> AI = new LinkedList<Spriites_snimky>();
     //Nejake cisla
     private int Max_pocet_normalnych_sliepok = 100;
     private int Aktulny_pocet_normalnych_sliepok;
+    private int Vytvorit_sliepok_naraz= 10;
     Timeline vznik_sliepok;
-    private double rychlost_sliepky = random(20, 50);
+    private double rychlost_sliepky = random(100, 200);
     
     private double rychlost_sceny = 40;
     private int smer; 
@@ -46,21 +48,24 @@ public class Game extends Group{
     	
 	}
     
-    public void update(double deltaTime) {
-    	//Pohyb sliepok
-    	this.Aktulny_pocet_normalnych_sliepok = AI.size();
-    	//System.out.println("Akt = "+Aktulny_pocet_normalnych_sliepok);
-    	for(int i=0; i<AI.size(); i++) {
-    		Spriites_snimky ai = AI.get(i);
-    		ai.pohyb(deltaTime / 1000000000 * AI.get(i).rychlost_sliepky);
-    		//System.out.println(rychlost_sliepky);
-    		if(AI.get(i).prec==true) {getChildren().remove(AI.get(i)); AI.remove(AI.get(i));}
-    		/*System.out.println("Sliepka ="+AI.get(i)+" rychlost="+AI.get(i).rychlost_sliepky+
-    				" PolohaX="+AI.get(i).getLayoutX());*/
-    	}
-    	
-    	
+ void update(double deltaTime) {
+        this.Aktulny_pocet_normalnych_sliepok = AI.size();
+
+        // Use an iterator to loop through the list
+        Iterator<Spriites_snimky> iterator = AI.iterator();
+        while (iterator.hasNext()) {
+            Spriites_snimky ai = iterator.next();
+            ai.pohyb(deltaTime / 1000000000 * ai.rychlost_sliepky);
+            
+
+            if (ai.prec) {
+               pane.getChildren().remove(ai);
+                iterator.remove(); // Use the iterator to safely remove the current element
+            }
+            
+        }
     }
+
     
     private void Nastav_Pozadie() {
     	//Nastavenie pozadi
@@ -96,7 +101,7 @@ public class Game extends Group{
         }
 		//System.out.println(pane.getTranslateX());
 	}
-	private double random(double min, double max) {
+	public double random(double min, double max) {
 		return min + (Math.random() * max);
 	}
 	private double smerSliepky() {
@@ -107,7 +112,7 @@ public class Game extends Group{
 	private void VytvorSliepku() {
 		//Ak je na ploche mene ako 100 sliepok da nove
 		if(Aktulny_pocet_normalnych_sliepok<Max_pocet_normalnych_sliepok) {
-		for(int i=0; i<=9; i++) {
+		for(int i=0; i<=Vytvorit_sliepok_naraz; i++) {
 		Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
     			smerSliepky(), random(0, Main.Vyska_obrazovky-152), 
     			142, 152, smer, random(35, 100));
