@@ -7,10 +7,13 @@ import java.util.List;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.geometry.Point2D;
+import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
@@ -34,6 +37,8 @@ public class Game extends Group{
     private int Vytvorit_sliepok_naraz= 10;
     Timeline vznik_sliepok;
     private double rychlost_sliepky = random(100, 200);
+    //Myska
+    private ImageView myska;
     
     private double rychlost_sceny = 40;
     private int smer; 
@@ -45,9 +50,11 @@ public class Game extends Group{
 		vznik_sliepok = new Timeline(new KeyFrame(Duration.seconds(3+random(2, 3)), e -> VytvorSliepku()));
 		vznik_sliepok.setCycleCount(Animation.INDEFINITE);
 		vznik_sliepok.play();
+		NastavMysku();
+		
+		
     	
 	}
-    
  void update(double deltaTime) {
         this.Aktulny_pocet_normalnych_sliepok = AI.size();
 
@@ -65,8 +72,6 @@ public class Game extends Group{
             
         }
     }
-
-    
     private void Nastav_Pozadie() {
     	//Nastavenie pozadi
 		pozadie_oblaky = new ImageView(Pozadie_Oblaky);
@@ -120,8 +125,42 @@ public class Game extends Group{
 		pane.getChildren().add(nieco);
 		}
 		}
-
 	}
+	private void NastavMysku() {
+		myska = new ImageView("cursor.gif");
+        myska.setFitWidth(37);
+        myska.setFitHeight(37);
+        pane.getChildren().add(myska);
+        scene.setCursor(Cursor.NONE); 
+		scene.addEventHandler(MouseEvent.MOUSE_PRESSED, event -> handleMouseClick(event));
+		scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> updateCursorImagePosition(event.getX(), event.getY()));
+	}
+	private void handleMouseClick(MouseEvent event) {
+	    if (event.getButton() == MouseButton.PRIMARY) {
+	        double clickX = event.getSceneX();
+	        double clickY = event.getSceneY();
+
+	        // Convert scene coordinates to local coordinates
+	        Point2D localClick = pane.sceneToLocal(new Point2D(clickX, clickY));
+
+	        // Check if the adjusted click intersects with any AI object
+	        for (Spriites_snimky ai : AI) {
+	            if (ai.getBoundsInParent().contains(localClick)) {
+	                ai.Zastrelena();
+	                break; // Exit the loop after handling the click on the first intersected AI object
+	            }
+	        }
+	    }
+	}
+	private void updateCursorImagePosition(double mouseX, double mouseY) {
+	    // Adjust the position of the cursor image based on the translation of the pane
+	    double adjustedX = mouseX - pane.getTranslateX();
+	    double adjustedY = mouseY - pane.getTranslateY();
+
+	    // Update the position of the cursor image
+	    myska.relocate(adjustedX - myska.getFitWidth() / 2, adjustedY - myska.getFitHeight() / 2);
+	}
+	
 }	
 	
 	
