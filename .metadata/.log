@@ -6018,3 +6018,873 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 00:11:07.280
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:16:54.504
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:377)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.351
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.394
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.416
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.439
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.458
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.477
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.495
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.514
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.532
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.561
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.580
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.608
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.626
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.644
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.662
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.679
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.696
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.713
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.730
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.747
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.764
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.781
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.801
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.818
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.836
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.853
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.871
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.889
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.906
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.924
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.941
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.959
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.976
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:46.993
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.011
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.027
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.044
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.060
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.076
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.092
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.115
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.173
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.194
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.235
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.255
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.274
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.295
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.313
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.332
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.350
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.368
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.469
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.503
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.520
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.541
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.561
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.584
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.638
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.663
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.688
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.708
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.730
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.751
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.777
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-11-17 01:18:47.829
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:175)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:310)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:371)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)

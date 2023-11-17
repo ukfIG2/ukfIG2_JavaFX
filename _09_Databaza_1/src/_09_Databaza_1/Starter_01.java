@@ -113,42 +113,202 @@ public class Starter_01 {
 				System.out.println("Ovladac nenajdeny: "+ e.toString());
 			}
 		}
-		
+		/*
 		public static void update(Statement stmt) {
 			try {
 				Scanner vstup = new Scanner(System.in);
 				System.out.println("Vloz ID, podla ktoreho sa zaznam upravi:");
 				int Totok = vstup.nextInt();
 				
-				String dotaz = "SELECT * FROM "+tabulka+" WHERE "+c1+" = " + Totok;
+				//String dotaz = "SELECT * FROM "+tabulka+" WHERE "+c1+" = " + Totok;
+				String dotaz = "SELECT * FROM " + tabulka + " WHERE " + c1 + " = " + Totok;
 				ResultSet rs = stmt.executeQuery(dotaz);
-				String meno1 = null;
-				//System.out.println("CHces prepisat "+c2+" \""+rs.getString(c2)+"\" ?");
-				//System.out.println(rs.getString(c2));
+				
+				String upravenia = "";
+				
 				if(rs.next()) {
 					System.out.println("CHces prepisat " + c2 + " \"" + rs.getString(c2) + "\" ? N/y");
 					String r1 = vstup.next();
 					if(r1.equalsIgnoreCase("y")) {
 						System.out.println("Ako?");
-						String meno_ = vstup.next();
-						meno1 = c2+" = "+meno_;
-						System.out.println(meno1);
-					}
-					else {}
-					//doplnil by som pre ostatne
-					String uprav = "UPDATE Tabulka_01 SET "+meno1+" WHERE ID ="+Totok;
-					//doplniln by som aj ostatne
-				 stmt.execute(uprav);
+						vstup.nextLine();
+						String meno_ = vstup.nextLine();
+						System.out.println(meno_);
+						upravenia += c2 + " = '" + meno_ + "',";
+					}	
 					
+					System.out.println("CHces prepisat " + c3 + " \"" + rs.getString(c3) + "\" ? N/y");
+					String r2 = vstup.next();
+					if(r2.equalsIgnoreCase("y")) {
+						System.out.println("Ako?");
+						vstup.nextLine();
+						String priezvisko_ = vstup.nextLine();
+						upravenia += c3 + " = '" + priezvisko_ + "',";		
 				}
+					
+					System.out.println("CHces prepisat " + c4 + " \"" + rs.getString(c4) + "\" ? N/y");
+					String r3 = vstup.next();
+					
+					if(r3.equalsIgnoreCase("y")) {
+						System.out.println("Ako?");
+						vstup.nextLine();
+						String Popis_priestupku_ = vstup.nextLine();
+						upravenia += c4 + " = '" + Popis_priestupku_ + "',";		
+				} else {}
+					
+					System.out.println("CHces prepisat " + c5 + " \"" + rs.getString(c5) + "\" ? N/y");
+					String r4 = vstup.next();
+					if(r4.equalsIgnoreCase("y")) {
+						System.out.println("Ako?");
+						vstup.nextLine();
+						String Datum_ = vstup.nextLine();
+						upravenia += c5 + " = '" + Datum_ + "',";	
+				} else {}
+					
+					System.out.println("CHces prepisat " + c6 + " \"" + rs.getString(c6) + "\" ? N/y");
+					String r5 = vstup.next();
+					if(r5.equalsIgnoreCase("y")) {
+						System.out.println("Ako?");
+						vstup.nextLine();
+						String Suma_ = vstup.nextLine();
+						upravenia += c6 + " = '" + Suma_ + "',";			
+				} else {}
+					
+					String uprav = "UPDATE Tabulka_01 SET " + upravenia + " WHERE " + c1 + " = " + Totok;
+					
+					System.out.println(upravenia);
+				System.out.println(uprav);
+					stmt.execute(uprav);
 				
-				
+			}
 			}
 			catch (Exception e) {
 				System.out.println("Ovladac nenajdeny: " + e.toString());
 		}
+		
 
+		}*/
+		/*
+		public static void update(Statement stmt) {
+		    try {
+		        Scanner vstup = new Scanner(System.in);
+		        System.out.println("Vloz ID, podla ktoreho sa zaznam upravi:");
+		        int Totok = vstup.nextInt();
+		        
+		        String dotaz = "SELECT * FROM " + tabulka + " WHERE " + c1 + " = " + Totok;
+		        ResultSet rs = stmt.executeQuery(dotaz);
+		        
+		        String upravenia = "";
+		        
+		        if (rs.next()) {
+		            System.out.println("CHces prepisat " + c2 + " \"" + rs.getString(c2) + "\" ? N/y");
+		            String r1 = vstup.next();
+		            if (r1.equalsIgnoreCase("y")) {
+		                System.out.println("Ako?");
+		                vstup.nextLine(); // Consume the newline character
+		                String meno_ = vstup.nextLine();
+		                upravenia += c2 + " = '" + meno_ + "',";
+		            }    
+		            
+		            // Repeat the same pattern for other fields...
+
+		            if (!upravenia.isEmpty()) {
+		                upravenia = upravenia.substring(0, upravenia.length() - 1);
+
+		                String uprav = "UPDATE Tabulka_01 SET " + upravenia + " WHERE " + c1 + " = " + Totok;
+		                System.out.println(upravenia);
+		                System.out.println(uprav);
+		                // Uncomment the following line to execute the update
+		                // stmt.execute(uprav);
+		            } else {
+		                System.out.println("Ziadne stlpce na aktualizaciu.");
+		            }
+		        } else {
+		            System.out.println("Zaznam s ID " + Totok + " neexistuje.");
+		        }
+		    } catch (Exception e) {
+		        System.out.println("Ovladac nenajdeny: " + e.toString());
+		    }
+		}*/
+
+		
+		public static void update(Statement stmt) {
+		    try {
+		        Scanner vstup = new Scanner(System.in);
+		        System.out.println("Vloz ID, podla ktoreho sa zaznam upravi:");
+		        int Totok = vstup.nextInt();
+
+		        String dotaz = "SELECT * FROM " + tabulka + " WHERE " + c1 + " = " + Totok;
+		        ResultSet rs = stmt.executeQuery(dotaz);
+
+		        String upravenia = "";
+
+		        if (rs.next()) {
+		            System.out.println("CHces prepisat " + c2 + " \"" + rs.getString(c2) + "\" ? N/y");
+		            String r1 = vstup.next();
+		            if (r1.equalsIgnoreCase("y")) {
+		                System.out.println("Ako?");
+		                vstup.nextLine(); // Consume the newline character
+		                String meno_ = vstup.nextLine();
+		                upravenia += c2 + " = '" + meno_ + "',";
+		            }
+
+		            System.out.println("CHces prepisat " + c3 + " \"" + rs.getString(c3) + "\" ? N/y");
+		            String r2 = vstup.next();
+		            if (r2.equalsIgnoreCase("y")) {
+		                System.out.println("Ako?");
+		                vstup.nextLine();
+		                String priezvisko_ = vstup.nextLine();
+		                upravenia += c3 + " = '" + priezvisko_ + "',";
+		            }
+
+		            System.out.println("CHces prepisat " + c4 + " \"" + rs.getString(c4) + "\" ? N/y");
+		            String r3 = vstup.next();
+
+		            if (r3.equalsIgnoreCase("y")) {
+		                System.out.println("Ako?");
+		                vstup.nextLine();
+		                String Popis_priestupku_ = vstup.nextLine();
+		                upravenia += c4 + " = '" + Popis_priestupku_ + "',";
+		            }
+
+		            System.out.println("CHces prepisat " + c5 + " \"" + rs.getString(c5) + "\" ? N/y");
+		            String r4 = vstup.next();
+		            if (r4.equalsIgnoreCase("y")) {
+		                System.out.println("Ako?");
+		                vstup.nextLine();
+		                String Datum_ = vstup.nextLine();
+		                upravenia += c5 + " = '" + Datum_ + "',";
+		            }
+
+		            System.out.println("CHces prepisat " + c6 + " \"" + rs.getString(c6) + "\" ? N/y");
+		            String r5 = vstup.next();
+		            if (r5.equalsIgnoreCase("y")) {
+		                System.out.println("Ako?");
+		                vstup.nextLine();
+		                String Suma_ = vstup.nextLine();
+		                upravenia += c6 + " = '" + Suma_ + "',";
+		            }
+
+		            if (!upravenia.isEmpty()) {
+		                upravenia = upravenia.substring(0, upravenia.length() - 1);
+
+		                String uprav = "UPDATE " + tabulka + " SET " + upravenia + " WHERE " + c1 + " = " + Totok;
+		                System.out.println(uprav);
+		                stmt.execute(uprav);
+		                System.out.println("Update successful!");
+		            } else {
+		                System.out.println("Ziadne stlpce na aktualizaciu.");
+		            }
+		        } else {
+		            System.out.println("Zaznam s ID " + Totok + " neexistuje.");
+		        }
+		    } catch (Exception e) {
+		        System.out.println("Ovladac nenajdeny: " + e.toString());
+		    }
 		}
+
+
 	}
 	
 
