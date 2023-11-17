@@ -34,20 +34,20 @@ public class Game extends Group{
     //Nejake cisla
     private int Max_pocet_normalnych_sliepok = 100;
     private int Aktulny_pocet_normalnych_sliepok;
-    private int Vytvorit_sliepok_naraz= 10;
+    private int Vytvorit_sliepok_naraz= 4;
     Timeline vznik_sliepok;
-    private double rychlost_sliepky = random(100, 200);
     //Myska
     private ImageView myska;
+    //Media
     
-    private double rychlost_sceny = 40;
+    private double rychlost_sceny = 30;
     private int smer; 
     
     public Game(Pane pane, Scene scene) {
     	this.scene=scene;
     	this.pane=pane;
     	Nastav_Pozadie();
-		vznik_sliepok = new Timeline(new KeyFrame(Duration.seconds(3+random(2, 3)), e -> VytvorSliepku()));
+		vznik_sliepok = new Timeline(new KeyFrame(Duration.seconds(3+random(0, 3)), e -> VytvorSliepku()));
 		vznik_sliepok.setCycleCount(Animation.INDEFINITE);
 		vznik_sliepok.play();
 		NastavMysku();
@@ -92,7 +92,7 @@ public class Game extends Group{
     private void  pohniKamerou(double mouseX) {
 		//System.out.println(mouseX);
 		//System.out.println(root.getTranslateX());
-		double priestor_aktivity = 500;
+		double priestor_aktivity = 300;
 		if (mouseX <= priestor_aktivity) {			
             // Pohyb dolava
             if (pane.getTranslateX() < 0) {
@@ -120,7 +120,7 @@ public class Game extends Group{
 		for(int i=0; i<=Vytvorit_sliepok_naraz; i++) {
 		Spriites_snimky nieco = new Spriites_snimky(this, "Sliepka/Sliepka", 21, 
     			smerSliepky(), random(0, Main.Vyska_obrazovky-152), 
-    			142, 152, smer, random(35, 100));
+    			142, 152, smer, random(100, 150));
 		AI.add(nieco);
 		pane.getChildren().add(nieco);
 		}

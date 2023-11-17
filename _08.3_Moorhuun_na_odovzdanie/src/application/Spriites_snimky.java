@@ -25,6 +25,7 @@ public class Spriites_snimky extends ImageView{
 	private boolean zastralena=false;
 	private boolean hit = false;
 	
+	
 		public Spriites_snimky(Game game, String nazov, int Pocet_snimkov, double poloha_X,
 				double poloha_Y, double Sirka_snimku, double Vyska_snimku, int smer, double rychlost_sliepky) {
 			this.game=game; this.smer=smer;  stav=0;
@@ -119,6 +120,7 @@ public class Spriites_snimky extends ImageView{
 	            hit = true; // Set the flag indicating that the AI has been hit
 	            zastralena = true;
 	            stav = 1;
+	            
 	        }
 	    }
 }

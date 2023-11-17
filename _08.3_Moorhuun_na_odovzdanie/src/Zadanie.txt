@@ -1,0 +1,11 @@
+Zistite si ako vyzerá v reále hra MoorHuhn, v ktorej sa strieľajú kačice/sliepky a vytvorte vlastnú verziu ako desktopovú aplikáciu.
+Bodovanie:
+
+    hrateľnosť - t.j. nebude sekať, klikanie bude príjemné, hráč sa nebude nudiť (max. 20 bodov) - ak stŕhate body, uveďte za čo
+    grafika - budú sa používať obrázky ťahané zo súborov na disku, animácie (let, zásah a pod.) (max. 20 bodov) - ak stŕhate body, uveďte za čo
+    zvuky - výstrel, hudobný podmaz (max. 20 bodov) - ak stŕhate body, uveďte za čo
+    čitateľnosť a efektívnosť kódu (max. 10 bodov) - ak stŕhate body, uveďte za čo
+    vychytávky - zobrazovanie nábojov, nabíjanie, bližšie nešpecifikované "príjemnosti" (max. 10 bodov) - ak pridelíte body, uveďte za čo
+
+Totožné hry dizajnom alebo kódom z hodnotenia vypadávajú a všetkým angažovaným adeptom sa odpočítava 500 bodov zo semestrálneho hodnotenia.
+Vyučujúci neposkytujú konzultácie na problémy zrejme nájditeľné v tutoriáloch (zvuky, obrázky, animácie a pod.).
