@@ -1,8 +1,8 @@
-s0 - strela
-s1 - zasah_sliepky
-s2 - zasah_sliepky2
-s3 - zasah_sliepky3
+s0 - strela				x													
+s1 - zasah_sliepky		x
+s2 - zasah_sliepky2		x									
+s3 - zasah_sliepky3		x	
 s4 - prazdna_zbran
 s5 - nabitie
-s6 - background_sound
+s6 - background_sound	x
 s7 - velka_sliepka

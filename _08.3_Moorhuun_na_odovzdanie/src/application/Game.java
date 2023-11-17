@@ -1,8 +1,11 @@
 package application;
 
+import java.io.File;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -16,6 +19,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 public class Game extends Group{
@@ -36,9 +41,12 @@ public class Game extends Group{
     private int Aktulny_pocet_normalnych_sliepok;
     private int Vytvorit_sliepok_naraz= 4;
     Timeline vznik_sliepok;
+    private Timeline soundTimeline;
     //Myska
     private ImageView myska;
-    //Media
+    //Media 
+    private static Map<Integer, MediaPlayer> soundCache;
+    
     
     private double rychlost_sceny = 30;
     private int smer; 
@@ -51,6 +59,13 @@ public class Game extends Group{
 		vznik_sliepok.setCycleCount(Animation.INDEFINITE);
 		vznik_sliepok.play();
 		NastavMysku();
+		initSoundCache();
+        soundTimeline = new Timeline(new KeyFrame(Duration.seconds(13), e -> playSound(6))); // Adjust the duration as needed
+        soundTimeline.setCycleCount(Animation.INDEFINITE);
+        soundTimeline.play();
+		
+		playSound(6);
+
 		
 		
     	
@@ -139,6 +154,8 @@ public class Game extends Group{
 	    if (event.getButton() == MouseButton.PRIMARY) {
 	        double clickX = event.getSceneX();
 	        double clickY = event.getSceneY();
+	        
+	        playSound(0);
 
 	        // Convert scene coordinates to local coordinates
 	        Point2D localClick = pane.sceneToLocal(new Point2D(clickX, clickY));
@@ -147,6 +164,7 @@ public class Game extends Group{
 	        for (Spriites_snimky ai : AI) {
 	            if (ai.getBoundsInParent().contains(localClick)) {
 	                ai.Zastrelena();
+	                //playSound((int) (1 + Math.random() * 3));
 	                break; // Exit the loop after handling the click on the first intersected AI object
 	            }
 	        }
@@ -161,6 +179,24 @@ public class Game extends Group{
 	    myska.relocate(adjustedX - myska.getFitWidth() / 2, adjustedY - myska.getFitHeight() / 2);
 	}
 	
+	public void initSoundCache() {
+	//caching medii
+	soundCache = new LinkedHashMap<>();
+	for(int i=0; i<=7; i++) {
+		//Media media = new Media(getClass().getResource("s"+i+".wav").toExternalForm());
+		String soundFilePath = new File("Zvuky/s"+i+".wav").toURI().toString();
+		MediaPlayer mediaPlayer = new MediaPlayer(new Media(soundFilePath));
+		soundCache.put(i, mediaPlayer);
+	}
+	}
+	
+	public static void playSound(int soundIndex) {
+		MediaPlayer mediaPlayer = soundCache.get(soundIndex);
+		if (mediaPlayer != null) {
+            mediaPlayer.seek(mediaPlayer.getStartTime());
+            mediaPlayer.play();
+        }
+	}
 }	
 	
 	

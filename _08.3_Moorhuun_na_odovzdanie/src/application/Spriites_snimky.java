@@ -120,6 +120,7 @@ public class Spriites_snimky extends ImageView{
 	            hit = true; // Set the flag indicating that the AI has been hit
 	            zastralena = true;
 	            stav = 1;
+                Game.playSound((int) (1 + Math.random() * 3));
 	            
 	        }
 	    }
