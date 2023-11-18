@@ -27,7 +27,7 @@ import javafx.util.Duration;
 public class Game extends Group{
 	private Pane pane;
 	private Scene scene;
-	//Nacirat pozadia
+	//Nacitat pozadia
     private Image Pozadie_Oblaky = new Image("cloud.gif");
     private Image Pozadie_Dedinka = new Image("parallaxbackground.GIF");
     //Nastavit sirku hry
@@ -38,11 +38,14 @@ public class Game extends Group{
     //Lisr pre normalne Sliepky
     private List<Spriites_snimky> AI = new LinkedList<Spriites_snimky>();
     //Nejake cisla
-    private int Max_pocet_normalnych_sliepok = 100;
+    private int Max_pocet_normalnych_sliepok = 100; 	//hraj sa
     private int Aktulny_pocet_normalnych_sliepok;
-    private int Vytvorit_sliepok_naraz= 4;
+    private int Vytvorit_sliepok_naraz= 4;				//hraj sa
     private int pocetNabojov;
     private int maxNabojov;
+    private double rychlost_sceny = 30;
+    private int smer;
+    //casovace
     public static Timeline vznik_sliepok;
     private Timeline soundTimeline;
     //Myska
@@ -53,10 +56,6 @@ public class Game extends Group{
     //Skore
     public double Pocet_vytvorenych_sliepok  = 0;
     public double Pocet_zasiahnutych_sliepok = 0;
-    
-    
-    private double rychlost_sceny = 30;
-    private int smer; 
     
     public Game(Pane pane, Scene scene) {
     	this.scene=scene;
@@ -72,40 +71,23 @@ public class Game extends Group{
         soundTimeline.play();
         maxNabojov = 5;
         createInitialAmmos();
-		playSound(6);
-
-		
-		
-    	
+		playSound(6);	//aby isla muzika od zaiatku.
+	
 	}
+    
     void update(double deltaTime) {
         this.Aktulny_pocet_normalnych_sliepok = AI.size();
 
-        // Use an iterator to loop through the list
+        // Pouzity interator
         Iterator<Spriites_snimky> iterator = AI.iterator();
         while (iterator.hasNext()) {
             Spriites_snimky ai = iterator.next();
             ai.pohyb(deltaTime / 1000000000 * ai.rychlost_sliepky);
-            
-
             if (ai.prec) {
                pane.getChildren().remove(ai);
-                iterator.remove(); // Use the iterator to safely remove the current element
-            }
-            
+                iterator.remove(); // Pouzijeme interator na mazanie
+            }   
         }
-        /*double result = (double) Pocet_zasiahnutych_sliepok/Pocet_vytvorenych_sliepok*100;
-	    double roundedResult = Math.round(result * 100.0) / 100.0;
-        Main.n2.setText("Zastrelil si "+Pocet_zasiahnutych_sliepok+" z "+Pocet_vytvorenych_sliepok+". "+roundedResult+"%.");*/
-       /* if (Pocet_zasiahnutych_sliepok != 0) {
-        	 double result = (double) Pocet_zasiahnutych_sliepok/Pocet_vytvorenych_sliepok*100;
-        	    double roundedResult = Math.round(result * 100.0) / 100.0;
-        	    System.out.println(Pocet_vytvorenych_sliepok + " " + Pocet_zasiahnutych_sliepok + " " + roundedResult);
-        } else {
-            System.out.println("Cannot divide by zero. Pocet_zasiahnutych_sliepok is zero.");
-        }*/
-        
-        //System.out.println("Sound cache size: " + soundCache.size());
     }
  
     private void Nastav_Pozadie() {
@@ -121,7 +103,6 @@ public class Game extends Group{
 		pozadie_dedinka.setY(Main.Vyska_obrazovky-pozadie_dedinka.getFitHeight());
 		pane.getChildren().add(pozadie_dedinka);
 
-		
 		//Nastavenie udalosti pohybu mysi
 		scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> pohniKamerou(event.getX()));
     }
@@ -129,7 +110,7 @@ public class Game extends Group{
     private void  pohniKamerou(double mouseX) {
 		//System.out.println(mouseX);
 		//System.out.println(root.getTranslateX());
-		double priestor_aktivity = 300;
+		double priestor_aktivity = 300;	//priestor okrajov, kedy sa kamera hybe
 		if (mouseX <= priestor_aktivity) {			
             // Pohyb dolava
             if (pane.getTranslateX() < 0) {
@@ -149,6 +130,7 @@ public class Game extends Group{
 	}
 	
 	private double smerSliepky() {
+		//Nahodne sa vyberie smer sliepky a da sa na na kraj prave alebo lavej strany
 		double a = random(0,1);
 		if(a<0.5) {smer=1; return 0;}
 		else {smer=0; return Sirka_hry-152;}
@@ -183,12 +165,10 @@ public class Game extends Group{
 	    if (event.getButton() == MouseButton.PRIMARY) {
 	        double clickX = event.getSceneX();
 	        double clickY = event.getSceneY();
-	        if(pocetNabojov>0) {playSound(0);}
-	        else {playSound(4);}
-
+	        if(pocetNabojov>0) {playSound(0);}	//zvuk prazdnej brokovnice
+	        else {playSound(4);}				//vystrel
 	        // Convert scene coordinates to local coordinates
 	        Point2D localClick = pane.sceneToLocal(new Point2D(clickX, clickY));
-
 	        // Check if the adjusted click intersects with any AI object
 	        boolean aiClicked = false;
 	        for (Spriites_snimky ai : AI) {
@@ -196,11 +176,9 @@ public class Game extends Group{
 	                if(pocetNabojov<=0) {}
 	                else {ai.Zastrelena(); reduceAmmo();}
 	                aiClicked = true;
-	                //playSound((int) (1 + Math.random() * 3));
 	                break; // Exit the loop after handling the click on the first intersected AI object
 	            }
 	        }
-
 	        if (!aiClicked) {
 	            reduceAmmo();
 	        }
@@ -208,8 +186,7 @@ public class Game extends Group{
 	    else if (event.getButton() == MouseButton.SECONDARY) {
 	        createInitialAmmos();
 	        //updateAmmoPosition();
-	        playSound(5);
-	    	
+	        playSound(5);	//zvuk nabitia
 	}
 	}
 	
@@ -217,17 +194,14 @@ public class Game extends Group{
 	    // Adjust the position of the cursor image based on the translation of the pane
 	    double adjustedX = mouseX - pane.getTranslateX();
 	    double adjustedY = mouseY - pane.getTranslateY();
-
 	    // Update the position of the cursor image
 	    myska.relocate(adjustedX - myska.getFitWidth() / 2, adjustedY - myska.getFitHeight() / 2);
-	    
 	}
 	
 	public void initSoundCache() {
 	//caching medii
 	soundCache = new LinkedHashMap<>();
 	for(int i=0; i<=7; i++) {
-		//Media media = new Media(getClass().getResource("s"+i+".wav").toExternalForm());
 		String soundFilePath = new File("Zvuky/s"+i+".wav").toURI().toString();
 		MediaPlayer mediaPlayer = new MediaPlayer(new Media(soundFilePath));
 		mediaPlayer.setOnError(() -> {
@@ -252,7 +226,7 @@ public class Game extends Group{
     private void reduceAmmo() {
         if (pocetNabojov > 0) {
             pocetNabojov--;
-            removeAmmo(); // Add this line to remove the corresponding ammo image
+            removeAmmo(); 
             //updateAmmoPosition();
         }
     }
@@ -269,17 +243,13 @@ public class Game extends Group{
         double initialX = Main.Sirka_obrazovky - 90 * 6; // Initial X position
         double yPosition = Main.Vyska_obrazovky - 79 * 2; // Y position for all images
         int numAmmoToCreate = Math.min(maxNabojov, 5); // Ensure that you create at most 5 images
-
         // Check the current number of ammo images in the pane
         int currentNumAmmo = ammoImages.size();
-
         // Calculate how many additional images can be created without exceeding the limit
         int remainingAmmoSlots = 5 - currentNumAmmo;
         int numAmmoToAdd = Math.min(numAmmoToCreate, remainingAmmoSlots);
-
         for (int i = 0; i < numAmmoToAdd; i++) {
             ImageView ammoImage = new ImageView("ammo.gif");
-
             ammoImage.setFitWidth(44);
             ammoImage.setFitHeight(79);
             ammoImage.setX(initialX + i * 10 + 44 * (i + 1) + i * 10); // 10p apart from each other
@@ -287,12 +257,10 @@ public class Game extends Group{
             ammoImages.add(ammoImage);
             pane.getChildren().add(ammoImage);
         }
-
         if (numAmmoToAdd > 0) {
-            //playSound(5);
+           
         }
     }
-    
     
     private void createInitialAmmos() {
         for (int i = 0; i < maxNabojov; i++) {
@@ -301,7 +269,6 @@ public class Game extends Group{
         createAmmoImages(); // Create ammo images at the start
         updateAmmoPosition(); // Update ammo positions at the start
     }
-
 
     private void createAmmo() {
         if (pocetNabojov < maxNabojov) {

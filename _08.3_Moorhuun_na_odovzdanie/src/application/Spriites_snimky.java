@@ -20,8 +20,8 @@ public class Spriites_snimky extends ImageView{
 	public boolean prec=false;
 	public double rychlost_sliepky;
 	//Optimalizacia. Caching snimok.
-	//private static Map<String, Image> imageCache = new HashMap<>();
-	private static Map<String, Image> imageCache = new LinkedHashMap<>();
+	private static Map<String, Image> imageCache = new HashMap<>(); //rychlesia
+	//private static Map<String, Image> imageCache = new LinkedHashMap<>();
 	private boolean zastralena=false;
 	private boolean hit = false;
 	
@@ -52,18 +52,15 @@ public class Spriites_snimky extends ImageView{
 			setX(poloha_X); setY(poloha_Y);		//Nastavit polohu
 		}
 
-
 		public void Dalsi_snimok() {
 		    if (zastralena) {
 		        if (stav == 1) {
 		            AKTsnimok = 13 + (AKTsnimok + 1) % 8;
 		            if (AKTsnimok == 20) {
-		                stav = 2; // Transition to state 3 after reaching the last image in state 2
+		                stav = 2; 
 		            }
 		        } else if (stav == 2) {
-		            // Stay on the last image in state 3
 		            AKTsnimok = 20;
-		            // You can add more logic here if needed
 		        }
 		    } else {
 		        if (stav == 0) {
@@ -75,11 +72,11 @@ public class Spriites_snimky extends ImageView{
 		private void Vykresli() {
 			Dalsi_snimok(); 
 		    setImage(snimky[AKTsnimok].getImage());
-		    // Check if smer is 1 (dolava) and apply horizontal flip
+		    //Ak ide sliepka z prava tak sa otoci snimka
 		    if (smer == 1) {
 		        setScaleX(-1);
 		    } else {
-		        setScaleX(1); // Reset to the original scale if smer is not 1
+		        setScaleX(1); //Niekedy to blbo, preto je tu aj else.
 		    }
 		}
 		
@@ -97,7 +94,7 @@ public class Spriites_snimky extends ImageView{
 				if(getLayoutX() < (-maxX-Sirka_snimku)) {prec=true;}
 				Vykresli();
 			}
-			
+			//moznost vertikalneho pohybu pri pohybe
 			if(hore_dole<0.3) {//dole
 				setY(getY() + delta);
 				if(getY() + Vyska_snimku > maxY) {prec=true;}
@@ -116,13 +113,12 @@ public class Spriites_snimky extends ImageView{
 		}
 		
 	    public void Zastrelena() {
-	        if (!hit) { // Check if the AI has not been hit before
-	            hit = true; // Set the flag indicating that the AI has been hit
+	        if (!hit) { // ak nebola sliepka trafena tak u trafime
+	            hit = true; //ked trafime sliepky tak bola trafena
 	            zastralena = true;
 	            stav = 1;
                 Game.playSound((int) (1 + Math.random() * 3));
                 game.Pocet_zasiahnutych_sliepok++;
-	            
-	        }
+	        }//else tu netreba, netrafili sme
 	    }
 }

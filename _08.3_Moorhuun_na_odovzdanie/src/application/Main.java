@@ -8,8 +8,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Screen;
@@ -21,11 +19,11 @@ public class Main extends Application{
 	private static Screen obrazovka = Screen.getPrimary();
 	public static final double Sirka_obrazovky = obrazovka.getBounds().getWidth();
     public	static final double Vyska_obrazovky = obrazovka.getBounds().getHeight();
-    
-    private Pane root;			//Treba inicializovat tuna, inac nebude viditelna pod void start
-	private MyTimer timer;
+  //Treba inicializovat tuna, inac nebude viditelna pod void ...
+    private Pane root;			//pre moje uceli lepsie ako group
+	private MyTimer timer;		//update timer
 	private Button n1;
-	Timeline stopGame;
+	private Timeline stopGame;
 	public static Button n2;
 	public Game game;
 	
@@ -81,11 +79,10 @@ public class Main extends Application{
 		root.getChildren().add(n2);
 		 double result = (double) game.Pocet_zasiahnutych_sliepok/game.Pocet_vytvorenych_sliepok*100;
 		    double roundedResult = Math.round(result * 100.0) / 100.0;
-		    Main.n2.setText("Zastrelil si "+game.Pocet_zasiahnutych_sliepok+" z "+game.Pocet_vytvorenych_sliepok+"; "+roundedResult+"%.");
+		    Main.n2.setText("Zastrelil si "+Math.round(game.Pocet_zasiahnutych_sliepok)+" z "+Math.round(game.Pocet_vytvorenych_sliepok)+" sliepok; "+roundedResult+"%.");
 		    n2.setOnMouseClicked(e -> System.exit(0));
 	}
 	
-
 	public static void main(String[] args) {
 		launch(args);
 	}
