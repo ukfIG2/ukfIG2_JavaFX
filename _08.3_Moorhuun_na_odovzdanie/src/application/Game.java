@@ -43,7 +43,7 @@ public class Game extends Group{
     private int Vytvorit_sliepok_naraz= 4;
     private int pocetNabojov;
     private int maxNabojov;
-    Timeline vznik_sliepok;
+    public static Timeline vznik_sliepok;
     private Timeline soundTimeline;
     //Myska
     private ImageView myska;
@@ -61,7 +61,7 @@ public class Game extends Group{
     	Nastav_Pozadie();
 		vznik_sliepok = new Timeline(new KeyFrame(Duration.seconds(3+random(0, 3)), e -> VytvorSliepku()));
 		vznik_sliepok.setCycleCount(Animation.INDEFINITE);
-		vznik_sliepok.play();
+		//vznik_sliepok.play();
 		NastavMysku();
 		initSoundCache();
         soundTimeline = new Timeline(new KeyFrame(Duration.seconds(13), e -> playSound(6))); // Adjust the duration as needed
@@ -91,7 +91,8 @@ public class Game extends Group{
             }
             
         }
-        System.out.print(pocetNabojov);
+        
+        //System.out.println("Sound cache size: " + soundCache.size());
     }
  
     private void Nastav_Pozadie() {
@@ -157,6 +158,7 @@ public class Game extends Group{
 		myska = new ImageView("cursor.gif");
         myska.setFitWidth(37);
         myska.setFitHeight(37);
+        
         pane.getChildren().add(myska);
         scene.setCursor(Cursor.NONE); 
 		scene.addEventHandler(MouseEvent.MOUSE_PRESSED, event -> handleMouseClick(event));
@@ -191,19 +193,20 @@ public class Game extends Group{
 	        }
 	    else if (event.getButton() == MouseButton.SECONDARY) {
 	        createInitialAmmos();
-	        updateAmmoPosition();
+	        //updateAmmoPosition();
 	        playSound(5);
 	    	
 	}
 	}
 	
-	private void updateCursorImagePosition(double mouseX, double mouseY) {
+	public void updateCursorImagePosition(double mouseX, double mouseY) {
 	    // Adjust the position of the cursor image based on the translation of the pane
 	    double adjustedX = mouseX - pane.getTranslateX();
 	    double adjustedY = mouseY - pane.getTranslateY();
 
 	    // Update the position of the cursor image
 	    myska.relocate(adjustedX - myska.getFitWidth() / 2, adjustedY - myska.getFitHeight() / 2);
+	    
 	}
 	
 	public void initSoundCache() {
@@ -213,23 +216,30 @@ public class Game extends Group{
 		//Media media = new Media(getClass().getResource("s"+i+".wav").toExternalForm());
 		String soundFilePath = new File("Zvuky/s"+i+".wav").toURI().toString();
 		MediaPlayer mediaPlayer = new MediaPlayer(new Media(soundFilePath));
+		mediaPlayer.setOnError(() -> {
+		    System.err.println("Error loading sound file: " + soundFilePath);
+		});
 		soundCache.put(i, mediaPlayer);
 	}
 	}
 	
 	public static void playSound(int soundIndex) {
 		MediaPlayer mediaPlayer = soundCache.get(soundIndex);
+		mediaPlayer.setVolume(1.0); // Set volume to maximum (1.0)
+		mediaPlayer.setMute(false); // Ensure mute is set to false
+
 		if (mediaPlayer != null) {
             mediaPlayer.seek(mediaPlayer.getStartTime());
             mediaPlayer.play();
-        }
+            System.out.println("Playing sound " + soundIndex);
+		} 
 	}
 	
     private void reduceAmmo() {
         if (pocetNabojov > 0) {
             pocetNabojov--;
             removeAmmo(); // Add this line to remove the corresponding ammo image
-            updateAmmoPosition();
+            //updateAmmoPosition();
         }
     }
 
@@ -265,7 +275,7 @@ public class Game extends Group{
         }
 
         if (numAmmoToAdd > 0) {
-            playSound(5);
+            //playSound(5);
         }
     }
     
