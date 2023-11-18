@@ -121,6 +121,7 @@ public class Spriites_snimky extends ImageView{
 	            zastralena = true;
 	            stav = 1;
                 Game.playSound((int) (1 + Math.random() * 3));
+                game.Pocet_zasiahnutych_sliepok++;
 	            
 	        }
 	    }

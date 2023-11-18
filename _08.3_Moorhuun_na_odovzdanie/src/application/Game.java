@@ -50,6 +50,9 @@ public class Game extends Group{
     //Media 
     private static Map<Integer, MediaPlayer> soundCache;
     private List<ImageView> ammoImages = new ArrayList<>();
+    //Skore
+    public double Pocet_vytvorenych_sliepok  = 0;
+    public double Pocet_zasiahnutych_sliepok = 0;
     
     
     private double rychlost_sceny = 30;
@@ -91,6 +94,16 @@ public class Game extends Group{
             }
             
         }
+        /*double result = (double) Pocet_zasiahnutych_sliepok/Pocet_vytvorenych_sliepok*100;
+	    double roundedResult = Math.round(result * 100.0) / 100.0;
+        Main.n2.setText("Zastrelil si "+Pocet_zasiahnutych_sliepok+" z "+Pocet_vytvorenych_sliepok+". "+roundedResult+"%.");*/
+       /* if (Pocet_zasiahnutych_sliepok != 0) {
+        	 double result = (double) Pocet_zasiahnutych_sliepok/Pocet_vytvorenych_sliepok*100;
+        	    double roundedResult = Math.round(result * 100.0) / 100.0;
+        	    System.out.println(Pocet_vytvorenych_sliepok + " " + Pocet_zasiahnutych_sliepok + " " + roundedResult);
+        } else {
+            System.out.println("Cannot divide by zero. Pocet_zasiahnutych_sliepok is zero.");
+        }*/
         
         //System.out.println("Sound cache size: " + soundCache.size());
     }
@@ -150,6 +163,7 @@ public class Game extends Group{
     			142, 152, smer, random(100, 150));
 		AI.add(nieco);
 		pane.getChildren().add(nieco);
+		Pocet_vytvorenych_sliepok++;
 		}
 		}
 	}
