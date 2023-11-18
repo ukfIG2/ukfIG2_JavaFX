@@ -1,6 +1,7 @@
 package application;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -40,12 +41,15 @@ public class Game extends Group{
     private int Max_pocet_normalnych_sliepok = 100;
     private int Aktulny_pocet_normalnych_sliepok;
     private int Vytvorit_sliepok_naraz= 4;
+    private int pocetNabojov;
+    private int maxNabojov;
     Timeline vznik_sliepok;
     private Timeline soundTimeline;
     //Myska
     private ImageView myska;
     //Media 
     private static Map<Integer, MediaPlayer> soundCache;
+    private List<ImageView> ammoImages = new ArrayList<>();
     
     
     private double rychlost_sceny = 30;
@@ -63,14 +67,15 @@ public class Game extends Group{
         soundTimeline = new Timeline(new KeyFrame(Duration.seconds(13), e -> playSound(6))); // Adjust the duration as needed
         soundTimeline.setCycleCount(Animation.INDEFINITE);
         soundTimeline.play();
-		
+        maxNabojov = 5;
+        createInitialAmmos();
 		playSound(6);
 
 		
 		
     	
 	}
- void update(double deltaTime) {
+    void update(double deltaTime) {
         this.Aktulny_pocet_normalnych_sliepok = AI.size();
 
         // Use an iterator to loop through the list
@@ -86,7 +91,9 @@ public class Game extends Group{
             }
             
         }
+        System.out.print(pocetNabojov);
     }
+ 
     private void Nastav_Pozadie() {
     	//Nastavenie pozadi
 		pozadie_oblaky = new ImageView(Pozadie_Oblaky);
@@ -104,6 +111,7 @@ public class Game extends Group{
 		//Nastavenie udalosti pohybu mysi
 		scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> pohniKamerou(event.getX()));
     }
+    
     private void  pohniKamerou(double mouseX) {
 		//System.out.println(mouseX);
 		//System.out.println(root.getTranslateX());
@@ -121,14 +129,17 @@ public class Game extends Group{
         }
 		//System.out.println(pane.getTranslateX());
 	}
+    
 	public double random(double min, double max) {
 		return min + (Math.random() * max);
 	}
+	
 	private double smerSliepky() {
 		double a = random(0,1);
 		if(a<0.5) {smer=1; return 0;}
 		else {smer=0; return Sirka_hry-152;}
 	}
+	
 	private void VytvorSliepku() {
 		//Ak je na ploche mene ako 100 sliepok da nove
 		if(Aktulny_pocet_normalnych_sliepok<Max_pocet_normalnych_sliepok) {
@@ -141,6 +152,7 @@ public class Game extends Group{
 		}
 		}
 	}
+	
 	private void NastavMysku() {
 		myska = new ImageView("cursor.gif");
         myska.setFitWidth(37);
@@ -150,26 +162,41 @@ public class Game extends Group{
 		scene.addEventHandler(MouseEvent.MOUSE_PRESSED, event -> handleMouseClick(event));
 		scene.addEventHandler(MouseEvent.MOUSE_MOVED, event -> updateCursorImagePosition(event.getX(), event.getY()));
 	}
+	
 	private void handleMouseClick(MouseEvent event) {
 	    if (event.getButton() == MouseButton.PRIMARY) {
 	        double clickX = event.getSceneX();
 	        double clickY = event.getSceneY();
-	        
-	        playSound(0);
+	        if(pocetNabojov>0) {playSound(0);}
+	        else {playSound(4);}
 
 	        // Convert scene coordinates to local coordinates
 	        Point2D localClick = pane.sceneToLocal(new Point2D(clickX, clickY));
 
 	        // Check if the adjusted click intersects with any AI object
+	        boolean aiClicked = false;
 	        for (Spriites_snimky ai : AI) {
 	            if (ai.getBoundsInParent().contains(localClick)) {
-	                ai.Zastrelena();
+	                if(pocetNabojov<=0) {}
+	                else {ai.Zastrelena(); reduceAmmo();}
+	                aiClicked = true;
 	                //playSound((int) (1 + Math.random() * 3));
 	                break; // Exit the loop after handling the click on the first intersected AI object
 	            }
 	        }
-	    }
+
+	        if (!aiClicked) {
+	            reduceAmmo();
+	        }
+	        }
+	    else if (event.getButton() == MouseButton.SECONDARY) {
+	        createInitialAmmos();
+	        updateAmmoPosition();
+	        playSound(5);
+	    	
 	}
+	}
+	
 	private void updateCursorImagePosition(double mouseX, double mouseY) {
 	    // Adjust the position of the cursor image based on the translation of the pane
 	    double adjustedX = mouseX - pane.getTranslateX();
@@ -197,6 +224,76 @@ public class Game extends Group{
             mediaPlayer.play();
         }
 	}
+	
+    private void reduceAmmo() {
+        if (pocetNabojov > 0) {
+            pocetNabojov--;
+            removeAmmo(); // Add this line to remove the corresponding ammo image
+            updateAmmoPosition();
+        }
+    }
+
+    private void updateAmmoPosition() {
+        for (int i = 0; i < ammoImages.size(); i++) {
+            ImageView ammoImage = ammoImages.get(i);
+            double newX = Main.Sirka_obrazovky - 90 * 6 + 44 * (i + 1) + i * 10; // Adjust positions
+            ammoImage.setX(newX);
+        }
+    }
+    
+    private void createAmmoImages() {
+        double initialX = Main.Sirka_obrazovky - 90 * 6; // Initial X position
+        double yPosition = Main.Vyska_obrazovky - 79 * 2; // Y position for all images
+        int numAmmoToCreate = Math.min(maxNabojov, 5); // Ensure that you create at most 5 images
+
+        // Check the current number of ammo images in the pane
+        int currentNumAmmo = ammoImages.size();
+
+        // Calculate how many additional images can be created without exceeding the limit
+        int remainingAmmoSlots = 5 - currentNumAmmo;
+        int numAmmoToAdd = Math.min(numAmmoToCreate, remainingAmmoSlots);
+
+        for (int i = 0; i < numAmmoToAdd; i++) {
+            ImageView ammoImage = new ImageView("ammo.gif");
+
+            ammoImage.setFitWidth(44);
+            ammoImage.setFitHeight(79);
+            ammoImage.setX(initialX + i * 10 + 44 * (i + 1) + i * 10); // 10p apart from each other
+            ammoImage.setY(yPosition);
+            ammoImages.add(ammoImage);
+            pane.getChildren().add(ammoImage);
+        }
+
+        if (numAmmoToAdd > 0) {
+            playSound(5);
+        }
+    }
+    
+    
+    private void createInitialAmmos() {
+        for (int i = 0; i < maxNabojov; i++) {
+            createAmmo();
+        }
+        createAmmoImages(); // Create ammo images at the start
+        updateAmmoPosition(); // Update ammo positions at the start
+    }
+
+
+    private void createAmmo() {
+        if (pocetNabojov < maxNabojov) {
+            pocetNabojov++;
+        }
+    }
+    
+    private void removeAmmo() {
+        if (!ammoImages.isEmpty()) {
+            ImageView removedAmmo = ammoImages.remove(ammoImages.size() - 1);
+            pane.getChildren().remove(removedAmmo);
+        }
+    }
+
+
+	
 }	
 	
 	
