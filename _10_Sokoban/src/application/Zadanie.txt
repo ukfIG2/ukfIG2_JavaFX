@@ -1,0 +1,15 @@
+Ako strážca skladu máte za úlohu premiestniť poprehadzované krabice na svoje miesto. Krabice môžete len posúvať, nedajú sa ani niesť alebo ťahať. Pohyb krabíc si musíte dopredu naplánovať, pretože sa môže stať, že jednu krabicu posuniete nechcene do rohu a môžete ísť odznova. Keď už prídete na začiatku na postup, kade budete krabice transportovať, zbytok levelu je už jednoduchý.
+
+hotovo    Po spustení sa vytvorí bludisko (10 bodov), do ktorého sa umiestni hrdina (Hero), krabice a značky, na ktoré ich treba umiestniť. (Ako pomôcku pre definíciu bludiska môžete využiť prezentáciu 2x26) 	
+    Hero je ovládateľný klávesnicou v 4 smeroch (3 body). Môže sa pohybovať plynule alebo skákať o zadaný počet bodov (akože chodí po políčkach bludiska)
+    Možno tlačiť len jednu bedňu (2 body)
+    Hra končí, keď sú všetky bedne na správnom mieste (5 body)
+
+Hodnotí sa aj:
+
+    prvý dojem (grafika, vizuál, štart) - 5 bodov
+    hrateľnosť (plynulosť, ovládanie, možnosť urobiť chybu, príťažlivosť) - 5 bodov
+    zdrojový kód (zrozumiteľný, okomentovaný, zrejme neukradnutý/ nevykopírovaný) - 5 bodov
+hotovo    hra má levely vhodne zakódované napr. v textových súboroch (v žiadnom prípade v kóde aplikácie) - pokojne sa inšpirujte už existujúcimi - 5 bodov														
+
+Úlohy zazipujte a odovzdajte.
